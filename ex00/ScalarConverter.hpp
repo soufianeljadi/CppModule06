@@ -9,7 +9,12 @@
 #include <sstream>
 #include <cmath>
 
-
+#include <cctype>
+#include <limits>
+#include <iomanip>
+#include <iostream>
+#include <sstream>
+#include <cstdlib>
 
 class ScalarConverter
 {
