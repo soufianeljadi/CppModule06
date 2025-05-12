@@ -3,6 +3,13 @@
 
 #include <iostream>
 #include <cstdlib>
+#include <climits>
+#include <iomanip>
+#include <limits>
+#include <sstream>
+#include <cmath>
+
+
 
 class ScalarConverter
 {
@@ -12,15 +19,8 @@ class ScalarConverter
         ScalarConverter(const ScalarConverter &other);
         ScalarConverter &operator=(const ScalarConverter &other);
 
-        static void convert( std::string &literal);
+        static void convert(const std::string &input);
 
 };
-
-// handleConversion
-void printChar(char c);
-void printInt(int i);
-void printFloat(float f);
-void printDouble(double d);
-void handleConversion(std::string &literal);
 
 #endif

@@ -14,31 +14,24 @@ ScalarConverter &ScalarConverter::operator=(const ScalarConverter &other)
     return *this;
 }
 
-void ScalarConverter::convert(std::string &literal) 
+
+void ScalarConverter::convert(const std::string& input) 
 {
-    if (literal == "nan" || literal == "nanf") 
+    if (input.empty()) 
     {
-        std::cout << "char: impossible" << std::endl;
-        std::cout << "int: impossible" << std::endl;
-        std::cout << "float: nanf" << std::endl;
-        std::cout << "double: nan" << std::endl;
+        std::cout << "Error: empty input" << std::endl;
+        return;
     }
-    else if (literal == "+inf" || literal == "+inff") 
-    {
-        std::cout << "char: impossible" << std::endl;
-        std::cout << "int: impossible" << std::endl;
-        std::cout << "float: +inff" << std::endl;
-        std::cout << "double: +inf" << std::endl;
-    } 
-    else if (literal == "-inf" || literal == "-inff") 
-    {
-        std::cout << "char: impossible" << std::endl;
-        std::cout << "int: impossible" << std::endl;
-        std::cout << "float: -inff" << std::endl;
-        std::cout << "double: -inf" << std::endl;
-    } 
+
+    double numericValue;
+
+    if (isCharLiteral(input))
+        numericValue = static_cast<double>(input[0]);
     else
-        handleConversion(literal);
+        numericValue = stringToDouble(input);
 
+    printCharConversion(numericValue);
+    printIntConversion(numericValue);
+    printFloatConversion(numericValue);
+    printDoubleConversion(numericValue);
 }
-
