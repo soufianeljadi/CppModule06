@@ -5,16 +5,11 @@
 #include <cstdlib>
 #include <climits>
 #include <iomanip>
-#include <limits>
 #include <sstream>
 #include <cmath>
-
 #include <cctype>
+#include <stdexcept>
 #include <limits>
-#include <iomanip>
-#include <iostream>
-#include <sstream>
-#include <cstdlib>
 
 class ScalarConverter
 {

@@ -1,10 +1,5 @@
 #include "ScalarConverter.hpp"
-#include <cctype>
-#include <limits>
-#include <iomanip>
-#include <iostream>
-#include <sstream>
-#include <cstdlib>
+
 
 // bool isSpecialValue(const std::string& str) {
 //     return (str == "nan" || str == "nanf" || 
