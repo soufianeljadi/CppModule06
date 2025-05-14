@@ -2,13 +2,8 @@
 #define SCALARCONVERTER_HPP
 
 #include <iostream>
-#include <cstdlib>
-#include <climits>
-#include <iomanip>
 #include <sstream>
 #include <cmath>
-#include <cctype>
-#include <stdexcept>
 #include <limits>
 
 class ScalarConverter
@@ -22,5 +17,14 @@ class ScalarConverter
         static void convert(const std::string &input);
 
 };
+
+int isValidNumber(const std::string& str);
+bool isSpecialValue(const std::string& str);
+double stringToDouble(const std::string& str);
+void printCharConversion(double value);
+void printIntConversion(double value);
+void printFloatConversion(double value);
+void printDoubleConversion(double value);
+bool isCharLiteral(const std::string& input);
 
 #endif
